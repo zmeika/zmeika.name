@@ -2,12 +2,16 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+@import "normalize";
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans');
-@import "../_sass/normalize";
-:root {
+
+// Theme variables
+.zmeika {
   --main: #050;
+  --background: #fff;
   --headlines: 'Comfortaa', cursive;
   --text: 'Open Sans', sans-serif;
+
 }
 
 *, *::before, *::after {
@@ -15,7 +19,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--background);
   font-size: 18px;
   font-family: var(--text);
   line-height: 1.5;
@@ -77,7 +81,27 @@ body {
 
 //Post
 .post {
+  margin-bottom: 2rem;
+
   &_title {
     font-family:var(--headlines);
+    color: var(--main);
+    margin-bottom: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &_excerpt {
+    p {
+      margin: 0;
+    }
+  }
+
+  &_date {
+    font-size: 0.8rem;
+    opacity: 0.8;
   }
 }

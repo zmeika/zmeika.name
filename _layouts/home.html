@@ -4,12 +4,14 @@ layout: default
 
 {% for post in site.posts %}
 <article class="post">
-    <span class="post_meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
     <h2 class="post_title">
         <a class="post_link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
     </h2>
-    <span class="post_excerpt"></span>
+    <div class="post_excerpt">
+        {{ post.excerpt }}
+        <a class="more" href="{{ post.url | relative_url }}">Читать</a>
+    </div>
+    <span class="post_date">{{ post.date | date: "%m.%d.%Y" }}</span>
+    <span class="post_tags">{{ post.tags | sort }}</span>
 </article>
 {% endfor %}
-
