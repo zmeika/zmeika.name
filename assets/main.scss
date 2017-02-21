@@ -1,21 +1,25 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
 @import "normalize";
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans:300');
 
 // Theme variables
 .zmeika {
-  --main: #050;
+  --main: #070;
   --background: #fff;
   --headlines: 'Comfortaa', cursive;
   --text: 'Open Sans', sans-serif;
-
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
+
+  transition: all 1s;
+}
+
+a:link, a:visited, a:active {
+  color: var(--main);
 }
 
 body {
@@ -24,7 +28,6 @@ body {
   font-family: var(--text);
   line-height: 1.5;
 }
-
 
 .container {
   max-width: 60em;
@@ -39,27 +42,33 @@ body {
 .header {
   width: 100%;
   height: 100px;
-  //background-color: #ffa
 }
 
-.content {
-  width: 65%;
-  float: left;
-  //background-color: #faa
-}
+@media screen and (min-width: 769px) {
+  .content {
+    width: 65%;
+    float: left;
+  }
 
-.sidebar {
-  width: 35%;
-  float: right;
-  //background-color: #aaf
+  .sidebar {
+    width: 35%;
+    float: right;
+    padding-top: 2rem;
+  }
 }
 
 @supports (display: grid) {
   .container {
     display: grid;
 
-    grid-template-columns: 2fr 1fr;
     grid-template-rows: 100px 1fr;
+
+    @media screen and (min-width: 769px) {
+      grid-template-columns: 2fr 1fr;
+      .header {
+        grid-column: 1 / 3;
+      }
+    }
   }
 
   .column {
@@ -67,9 +76,6 @@ body {
     width: auto;
   }
 
-  .header {
-    grid-column: 1 / 3;
-  }
 }
 
 .logo {
@@ -79,12 +85,20 @@ body {
   color: var(--main);
 }
 
+.block {
+  &__contacts {
+    p {
+      margin: 0 0 0.5rem;
+    }
+  }
+}
 //Post
 .post {
   margin-bottom: 2rem;
 
   &_title {
-    font-family:var(--headlines);
+    font-family: var(--headlines);
+    font-size: 2.5rem;
     color: var(--main);
     margin-bottom: 0.5rem;
 
@@ -104,4 +118,26 @@ body {
     font-size: 0.8rem;
     opacity: 0.8;
   }
+
+  &_content {
+
+    h2, h3 {
+      font-family: var(--headlines);
+      margin-bottom: 0;
+
+      & + p, & + ul {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
+
+.paint-it-all {
+  color: var(--main);
+  background: transparent;
+  display: block;
+  text-align: center;
+  border: 2px solid currentColor;
+  padding: 0.8rem 3.5rem;
+  cursor: pointer;
 }

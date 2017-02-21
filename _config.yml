@@ -17,7 +17,7 @@ title: zmeika.name
 lang: ru
 email: julia.roslyakova@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Привет :) Меня зовут Юля. Я работаю верстальщиком и время от времени что-нибудь перевожу.
+  <p>Привет :)</p><p>Меня зовут Юля. Я работаю верстальщиком и время от времени что-нибудь перевожу.</p>
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://zmeika.name # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: _zmeika
