@@ -12,9 +12,10 @@
         {% if site.github_username %}
             {% include icon-github.html username=site.github_username %}
         {% endif %}
-
+        <p class="rss-subscribe"><a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
     </section>
-    <p class="rss-subscribe"> <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
 
-    {% include button.html %}
+    <section class="block block__button">
+        {% include button.html %}
+    </section>
 </aside>
