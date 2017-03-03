@@ -132,10 +132,14 @@ body {
   &_title {
     font-family: 'Comfortaa', sans-serif;
     font-family: var(--headlines);
-    font-size: 2.5rem;
     color: #050;
     color: var(--main, #050);
     margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+
+    @media screen and (min-width: 769px) {
+      font-size: 2.5rem;
+    }
 
     a {
       text-decoration: none;
@@ -189,21 +193,24 @@ body {
     table {
       font-size: 0.8em;
       border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
 
       th {
         font-weight: 500;
         text-align: left;
         padding: 0.5em;
+        overflow-x: auto;
       }
 
       td {
         padding: 0.3em;
         border: 1px solid;
+        overflow-x: auto;
       }
     }
-
-    @import "syntax";
   }
+  @import "syntax";
 }
 
 .paint-it-all {
