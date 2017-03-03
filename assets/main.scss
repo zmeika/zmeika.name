@@ -11,27 +11,33 @@
   --headlines: 'Comfortaa', sans-serif;
   --text: 'Open Sans', sans-serif;
   --shade: #f5f5f5;
+  --hover: #ffffff;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
 
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 a:link, a:visited, a:active {
-  color: var(--main);
+  color: #050;
+  color: var(--main, #050);
   padding: 0 0.2em;
 }
 
 a:hover {
   color: #fff;
-  background-color: var(--main);
+  color: var(--hover);
+  background-color: #050;
+  background-color: var(--main, #050);
 }
 
 body {
-  background-color: var(--background);
+  background-color: #fff;
+  background-color: var(--background, #fff);
   font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
   font-family: var(--text);
   line-height: 1.5;
 }
@@ -86,11 +92,13 @@ body {
 }
 
 .logo {
+  font-family: 'Comfortaa', sans-serif;
   font-family: var(--headlines);
   font-size: 2em;
   font-weight: 300;
   text-decoration: none;
-  color: var(--main);
+  color: #050;
+  color: var(--main, #050);
   border-bottom: 1px solid currentColor;
 }
 
@@ -101,10 +109,20 @@ body {
     }
   }
   margin-bottom: 2rem;
+
+  a {
+    text-decoration: none;
+  }
 }
 
-.icon {
+.icon svg {
+  fill: #050;
   fill: var(--main);
+
+  a:hover & {
+    fill: #fff;
+    fill: var(--hover);
+  }
 }
 
 //Post
@@ -112,9 +130,11 @@ body {
   margin-bottom: 2rem;
 
   &_title {
+    font-family: 'Comfortaa', sans-serif;
     font-family: var(--headlines);
     font-size: 2.5rem;
-    color: var(--main);
+    color: #050;
+    color: var(--main, #050);
     margin-bottom: 0.5rem;
 
     a {
@@ -136,8 +156,10 @@ body {
   &_content {
 
     h2, h3 {
+      font-family: 'Comfortaa', sans-serif;
       font-family: var(--headlines);
-      color: var(--main);
+      color: #050;
+      color: var(--main, #050);
       margin-bottom: 0;
 
       & + p, & + ul {
@@ -156,7 +178,9 @@ body {
     }
 
     blockquote {
-      border-left: 0.3em solid var(--main);
+      border-left: 0.3em solid;
+      border-left-color: #050;
+      border-left-color: var(--main);
       margin-left: 0;
       margin-right: 0;
       padding-left: 1em;
@@ -183,7 +207,8 @@ body {
 }
 
 .paint-it-all {
-  color: var(--main);
+  color: #050;
+  color: var(--main, #050);
   background: transparent;
   display: block;
   text-align: center;
