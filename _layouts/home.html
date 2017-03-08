@@ -11,7 +11,7 @@ layout: default
         {{ post.excerpt }}
         <a class="more" href="{{ post.url | relative_url }}">Читать</a>
     </div>
-    <span class="post_date">{{ post.date | date: "%m.%d.%Y" }}</span>
+    <span class="post_date">{{ post.date | date: "%d.%m.%Y" }}</span>
     <span class="post_tags">{{ post.tags | sort }}</span>
 </article>
 {% endfor %}
