@@ -177,7 +177,7 @@ section.news > .sidenote {
 
 Пользовательские свойства [любого элемента](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration) доступны для методов `getPropertyValue` и `setProperty` .
 
-{% highlight css %}
+{% highlight javascript %}
 const styles = getComputedStyle(document.querySelector('.foo'));
 // Чтение свойства. Не забыть убрать пробелы с помощью trim()
 const oldColor = styles.getPropertyValue('--color').trim();
