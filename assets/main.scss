@@ -10,6 +10,7 @@
   --background: #fff;
   --headlines: 'Comfortaa', sans-serif;
   --text: 'Open Sans', sans-serif;
+  --monospace: Consolas, Menlo, monospace;
   --shade: #f5f5f5;
   --hover: #ffffff;
 }
@@ -49,6 +50,7 @@ img {
 
 code, pre {
   font-family: Consolas, Menlo, monospace;
+  font-family: var(--monospace);
   font-size: 0.8em;
 }
 
