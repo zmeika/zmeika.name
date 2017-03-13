@@ -5,14 +5,15 @@
 
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
-    <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
+    <link rel="manifest" href="{{ 'manifest.json' | relative_url }}">
 
     <meta name="description"
           content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/main.css' | relative_url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"
-          href="{{ '/feed.xml' | relative_url }}">
-    <link rel="icon" href="{{ '/icons/icon-64x64.png' | relative_url }}">
+          href="{{ 'feed.xml' | relative_url }}">
+    <link rel="icon" href="{{ 'assets/icons/favicon.ico' | relative_url }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ 'assets/icons/favicon.png' | relative_url }}">
 </head>
