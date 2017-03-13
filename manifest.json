@@ -1,0 +1,26 @@
+{
+  "name": "zmeika.name",
+  "description": "zmeika пишет обо всём подряд",
+  "lang": "ru",
+  "direction": "ltr",
+  "icons": [
+    {
+      "src": "icons/favicon.ico",
+      "sizes": "32x32"
+    },
+    {
+      "src": "icons/icon-64x64.png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "icons/icon-120x120.png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "icons/icon-180x180.png",
+      "sizes": "180x180"
+    }
+  ],
+  "theme_color": "#005500",
+  "background_color": "#ffffff"
+}
