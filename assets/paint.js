@@ -7,6 +7,7 @@ button.addEventListener('click', magic);
 
 function magic() {
     style.textContent = '.zmeika {--main: '+ getRandomColor(256) + ';}';
+    yaCounter38283935.reachGoal('btnClick'); return true;
 }
 
 function getRandomColor(max) {
